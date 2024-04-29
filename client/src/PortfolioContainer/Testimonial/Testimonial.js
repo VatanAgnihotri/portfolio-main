@@ -19,19 +19,21 @@ const ResumeHeading = (props) => (
         Code:
         <a href={props.repo} target="_blank">
           {" "}
-          {props.repo}
+          Click here to Check Out
         </a>
       </span>
     </div>
-    <div className="resume-sub-heading">
-      <span style={{ color: "tomato" }}>
-        Website:
-        <a href={props.site} target="_blank">
-          {" "}
-          {props.site}
-        </a>
-      </span>
-    </div>
+    {props.site && (
+      <div className="resume-sub-heading">
+        <span style={{ color: "tomato" }}>
+          Website:
+          <a href={props.site} target="_blank">
+            {" "}
+            Click here to Check Out
+          </a>
+        </span>
+      </div>
+    )}
   </div>
 );
 
@@ -86,7 +88,6 @@ export default function Testimonial(props) {
                     <ResumeHeading
                       heading={"Delivery Management System"}
                       repo="https://github.com/VatanAgnihotri/Courier-Management"
-                      site="https://courier-management-f4df6.web.app/"
                     />
                     <p>
                       <i className="fa fa-quote-left" />
@@ -111,7 +112,6 @@ export default function Testimonial(props) {
                     <ResumeHeading
                       heading={"Trip Inquiry and Management System"}
                       repo="https://github.com/VatanAgnihotri/travelopia_project"
-                      site="https://assessment-travelopia-project.onrender.com/"
                     />
                     <p>
                       <i className="fa fa-quote-left" />
@@ -123,6 +123,29 @@ export default function Testimonial(props) {
                       cannot access the admin flow whereas admins can login and
                       check all the inquires raised by the users. Tech used is:
                       React, Node, MongoDB, Express, Server Side Rendering.
+                      <i className="fa fa-quote-right" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-lg-12">
+                <div className="testi-item">
+                  <div className="testi-comment">
+                    <ResumeHeading
+                      heading={"E Signature Application"}
+                      repo="https://github.com/VatanAgnihotri/signature_pad"
+                      site="https://easysign-74771.firebaseapp.com/"
+                    />
+                    <p>
+                      <i className="fa fa-quote-left" />
+                      It is a simple Signature Application. As these days, there
+                      are no free E-Signature websites available, I had created
+                      this application for my of Lawyer friend who has to work a
+                      lot with the E-Signatures and ususally he was spending
+                      money to create those. These days, it is being used by
+                      some Lawyers and CA. Technologies used: React, Tailwind
+                      CSS, Firebase Hosting.
                       <i className="fa fa-quote-right" />
                     </p>
                   </div>
